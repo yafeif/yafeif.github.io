@@ -6,14 +6,18 @@
     <description>Recent content in Posts on My Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Dec 2020 21:54:21 +0800</lastBuildDate><atom:link href="http://yafeif.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Dec 2020 23:25:26 +0800</lastBuildDate><atom:link href="http://yafeif.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hugo搭建个人博客记录</title>
-      <link>http://yafeif.github.io/posts/hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/</link>
-      <pubDate>Tue, 22 Dec 2020 21:54:21 +0800</pubDate>
+      <title>ArrayList扩容？</title>
+      <link>http://yafeif.github.io/posts/arraylist%E6%89%A9%E5%AE%B9/</link>
+      <pubDate>Fri, 25 Dec 2020 23:25:26 +0800</pubDate>
       
-      <guid>http://yafeif.github.io/posts/hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/</guid>
-      <description> 按照hugo网站Quick Start一路走下去 在当前目录创建.gitignore，忽略public/目录 切换到public目录，创建git仓库，提交到Github Github Repository &amp;gt; Settings &amp;gt; Github Pages 配置main分支，域名 � 创建新文章，hugo new posts/new.md 然后编辑new.md，再运行hugo -D，最后提交public目录。 等待&amp;hellip;  </description>
+      <guid>http://yafeif.github.io/posts/arraylist%E6%89%A9%E5%AE%B9/</guid>
+      <description>ArrayList有三种构造方法：
+public ArrayList() public ArrayList(int initialCapacity) public ArrayList(Collection&amp;lt;? extends E&amp;gt; c) 第一个无参的构造方法
+/** * Constructs an empty list with an initial capacity of ten. */ public ArrayList() { this.elementData = DEFAULTCAPACITY_EMPTY_ELEMENTDATA; } 注释说默认容量是10
+private static final int DEFAULT_CAPACITY = 10; 当要添加元素（扩容）时，从调用add()方法开始
+/** * Appends the specified element to the end of this list. * * @param e element to be appended to this list * @return &amp;lt;tt&amp;gt;true&amp;lt;/tt&amp;gt; (as specified by {@link Collection#add}) */ public boolean add(E e) { ensureCapacityInternal(size + 1); // Increments modCount!</description>
     </item>
     
     <item>
