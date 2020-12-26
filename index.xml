@@ -6,7 +6,25 @@
     <description>Recent content on My Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 25 Dec 2020 23:25:26 +0800</lastBuildDate><atom:link href="http://yafeif.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 26 Dec 2020 21:43:10 +0800</lastBuildDate><atom:link href="http://yafeif.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Maven包管理</title>
+      <link>http://yafeif.github.io/posts/maven%E5%8C%85%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Sat, 26 Dec 2020 21:43:10 +0800</pubDate>
+      
+      <guid>http://yafeif.github.io/posts/maven%E5%8C%85%E7%AE%A1%E7%90%86/</guid>
+      <description>JVM加载一个类，要先去找到类对应的.class文件。在运行的时候，会在-classpath参数中依次查找。如果找到了要找的.class文件，就不再继续查找。找不到会报NoClassDefFoundError错误。
+Maven中央仓库，按约定存储包：groupid artifactid version 本地仓库，位于~/.m2有缓存。
+Maven包管理有两个作用：
+  自动管理传递性依赖
+A-依赖-&amp;gt;B-依赖-&amp;gt;C&amp;hellip;
+  解决依赖冲突
+比如
+A -&amp;gt; B -&amp;gt; C1 D -&amp;gt; C2 C1和C2依赖冲突 Maven遵循两个原则：
+ 不允许出现两个同名的jar包 优先最近的 因此这时候Maven会选择C2  如果要用C1，解决办法：
+ 在pom.xml中引入C1，这时C1变最近 添加&amp;lt;exclusion&amp;gt;字段告诉maven排除掉依赖C2    </description>
+    </item>
+    
     <item>
       <title>ArrayList扩容？</title>
       <link>http://yafeif.github.io/posts/arraylist%E6%89%A9%E5%AE%B9/</link>
@@ -18,6 +36,15 @@ public ArrayList() public ArrayList(int initialCapacity) public ArrayList(Collec
 /** * Constructs an empty list with an initial capacity of ten. */ public ArrayList() { this.elementData = DEFAULTCAPACITY_EMPTY_ELEMENTDATA; } 注释说默认容量是10
 private static final int DEFAULT_CAPACITY = 10; 当要添加元素（扩容）时，从调用add()方法开始
 /** * Appends the specified element to the end of this list. * * @param e element to be appended to this list * @return &amp;lt;tt&amp;gt;true&amp;lt;/tt&amp;gt; (as specified by {@link Collection#add}) */ public boolean add(E e) { ensureCapacityInternal(size + 1); // Increments modCount!</description>
+    </item>
+    
+    <item>
+      <title>Hugo搭建个人博客记录</title>
+      <link>http://yafeif.github.io/posts/hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Tue, 22 Dec 2020 21:54:21 +0800</pubDate>
+      
+      <guid>http://yafeif.github.io/posts/hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/</guid>
+      <description> 按照hugo网站Quick Start一路走下去 在当前目录创建.gitignore，忽略public/目录 切换到public目录，创建git仓库，提交到Github Github Repository &amp;gt; Settings &amp;gt; Github Pages 配置main分支，域名 � 创建新文章，hugo new posts/new.md 然后编辑new.md，再运行hugo -D，最后提交public目录。 等待&amp;hellip;  </description>
     </item>
     
     <item>
